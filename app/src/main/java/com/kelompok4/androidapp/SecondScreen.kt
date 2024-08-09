@@ -48,7 +48,6 @@ class SecondScreen : AppCompatActivity() {
 
             val selectedUser = data.getParcelableExtra<User>("selectedUser")
             if (selectedUser != null) {
-                // Clear the current list and add the selected user
                 selectedUserList.clear()
                 selectedUserList.add(selectedUser)
                 adapter.notifyDataSetChanged()
