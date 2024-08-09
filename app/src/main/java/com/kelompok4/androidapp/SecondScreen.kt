@@ -26,14 +26,11 @@ class SecondScreen : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         val btnChooseUser = findViewById<Button>(R.id.btnChooseUser)
 
-        // Retrieve name from the intent
         val name = intent.getStringExtra("name")
         nameText.text = name ?: "No name provided"
 
-        // Setting up RecyclerView with an empty list initially
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = UserAdapter(selectedUserList) { user ->
-            // You can define an onClick action here if needed
         }
         recyclerView.adapter = adapter
 
