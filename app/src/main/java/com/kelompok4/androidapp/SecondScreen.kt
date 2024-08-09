@@ -46,7 +46,6 @@ class SecondScreen : AppCompatActivity() {
             val selectedUserName = data.getStringExtra("selectedUserName")
             selectedUserText.text = selectedUserName ?: "No user selected"
 
-            // Retrieve the selected user object from the intent
             val selectedUser = data.getParcelableExtra<User>("selectedUser")
             if (selectedUser != null) {
                 // Clear the current list and add the selected user
